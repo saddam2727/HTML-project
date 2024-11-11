@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage ('clone the code') {
             steps {
+                # clone the code
                 git branch:'main',url:'https://github.com/Radhakrishnaaaaa/HTML-project.git'
             }
         }
