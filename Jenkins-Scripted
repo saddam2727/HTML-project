@@ -1,0 +1,11 @@
+node {
+    stage ('checkout') {
+        git branch :'main', url:'https://github.com/Radhakrishnaaaaa/HTML-project.git'
+    }
+    stage ('remove olderfiles in webserver') {
+        sh ''' rm -rf /var/www/html/* '''
+    }
+    stage ('deployment') {
+        sh ''' cp -r /var/lib/jenkins/workspace/pipeline/* /var/www/html '''
+    }
+}
