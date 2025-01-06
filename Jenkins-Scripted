@@ -1,6 +1,6 @@
 node {
     stage ('checkout') {
-        git branch :'main', url:'https://github.com/Radhakrishnaaaaa/HTML-project.git'
+        git branch :'main', url:'https://github.com/saddam2727/HTML-project.git'
     }
     stage ('remove olderfiles in webserver') {
         sh ''' rm -rf /var/www/html/* '''
